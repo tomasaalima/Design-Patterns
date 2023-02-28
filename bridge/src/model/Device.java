@@ -1,6 +1,7 @@
 package model;
 
 public interface Device {
+	
 	public boolean isEnable();
 	
 	public void enable();

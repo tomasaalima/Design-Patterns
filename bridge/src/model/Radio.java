@@ -41,7 +41,7 @@ public class Radio implements Device{
 	public void setVolume(int percent) {
 		// TODO Auto-generated method stub
 		this.volume = percent;
-		System.out.println(this.volume);	}
+		System.out.println("Volume:" + this.volume);	}
 
 	@Override
 	public int getChannel() {
@@ -53,7 +53,7 @@ public class Radio implements Device{
 	public void setChannel(int channel) {
 		// TODO Auto-generated method stub
 		this.channel = channel;
-		System.out.println(this.channel);
+		System.out.println("Canal:" + this.channel);
 	}
 	
 	public void setPowerOn(boolean powerOn) {

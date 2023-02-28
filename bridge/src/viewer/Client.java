@@ -15,7 +15,7 @@ public class Client {
 		tvControl.togglePower();
 		
 		Device radio = new Radio();
-		Remote radioControl = new AdvancedRemote(radio);
+		AdvancedRemote radioControl = new AdvancedRemote(radio);
 		radioControl.togglePower();
 		
 		boolean done = true;
@@ -28,27 +28,32 @@ public class Client {
 							+ "2 - Diminuir volume \n"
 							+ "3 - Passar o Canal \n"
 							+ "4 - Voltar o canal \n"
-							+ "5 - Desligar \n");
+							+ "5 - Mutar \n"
+							+ "6 - Desligar \n");
 			
 			switch (sc.nextInt()) {
 				case 1: {
-					tvControl.volumeUp();
+					radioControl.volumeUp();
 					break;
 				}
 				case 2: {
-					tvControl.volumeDown();
+					radioControl.volumeDown();
 					break;
 				}
 				case 3: {
-					tvControl.channelUp();
+					radioControl.channelUp();
 					break;
 				}
 				case 4: {
-					tvControl.channelDown();
+					radioControl.channelDown();
 					break;
 				}
 				case 5: {
-					tvControl.togglePower();
+					radioControl.mute();
+					break;
+				}
+				case 6: {
+					radioControl.togglePower();
 					done = false;
 					break;
 				}
