@@ -6,15 +6,15 @@ import java.io.File;
  * Launch the web-search example
  */
 public class Main {
-    public static void main(String[] args) {
-        // Source file (in the project's data/ folder)
-        File inputTextFile = new File("./Hamlet.txt");
+	public static void main(String[] args) {
+		// Source file (in the project's data/ folder)
+		File inputTextFile = new File("./Hamlet.txt");
 
-        // Build object graph
-        WebSearchModel model = new WebSearchModel(inputTextFile);
-        Snooper snoop = new Snooper(model);
+		// Build object graph
+		WebSearchModel model = new WebSearchModel(inputTextFile);
+		Snooper snoop = new Snooper(model);
 
-        // Execute
-        model.pretendToSearch();
-    }
+		// Execute
+		model.pretendToSearch();
+	}
 }
