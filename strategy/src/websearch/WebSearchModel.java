@@ -14,6 +14,7 @@ public class WebSearchModel {
 
 	public interface QueryObserver {
 		void onQuery(String query);
+		void setStrategy(SearchFilterStrategy filter);
 	}
 
 	// -----------------------------------------------------------------------
@@ -79,5 +80,9 @@ public class WebSearchModel {
 		for (QueryObserver obs : observers) {
 			obs.onQuery(line);
 		}
+	}
+
+	public List<QueryObserver> getObservers() {
+		return observers;
 	}
 }
