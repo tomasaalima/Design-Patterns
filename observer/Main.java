@@ -10,14 +10,31 @@ public class Main {
 
         model.subscribe(new PhoneModel.Observer(){
 
-            public void print(){
-                System.out.println("Observador adicionado");
+            public void print(String number){
+                System.out.println("pressionando: " + number);
+            }
+
+            public void isInterested(int number){
+                if(model.getDigits().size() < 9)
+                    this.print("" + number + "");
             }
         });
 
-        model.unscribe(new PhoneModel.Observer() {
-            public void print(){
-                System.out.println("Observador adicionado");
+        
+        model.subscribe(new PhoneModel.Observer() {
+            public void print(String number){
+                System.out.println("Discando " + number + "...");
+            }
+
+            public void isInterested(int number){
+                if(model.getDigits().size() == 9){
+                    String value = "";
+                    for(Integer num: model.getDigits()){
+                        value += "" + num + "";
+                    }
+                        this.print(value);
+                }
+
             }
         });
 
