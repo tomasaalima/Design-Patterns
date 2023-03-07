@@ -15,7 +15,7 @@ public class Main {
             }
 
             public void isInterested(int number){
-                if(model.getDigits().size() < 9)
+                if(model.getDigits().size() <= 9)
                     this.print("" + number + "");
             }
         });
