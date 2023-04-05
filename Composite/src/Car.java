@@ -1,14 +1,20 @@
-public class Car implements Component {
-    private Chassis chassis;
-    private Bodywork bodywork;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Car implements Component{
+	private List<Component> partsList;
 
     public Car() {
-    	chassis = new Chassis();
-    	bodywork = new Bodywork();
+    	partsList = new ArrayList<>();
+    	partsList.add(new Chassis());
+    	partsList.add(new Bodywork());
     }
 
     public double weightCalculator() {
-        double total = chassis.weightCalculator() + bodywork.weightCalculator();
+    	double total = 0;
+        for (Component part : partsList) {
+            total += part.weightCalculator();
+        }
         System.out.println("Peso total do carro: " + total);
         return total;
     }

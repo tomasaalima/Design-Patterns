@@ -7,7 +7,7 @@ public class Chassis implements Component {
     public Chassis() {
     	partsList = new ArrayList<>();
     	partsList.add(new PowerTrain());
-    	partsList.add(new Part("suspensão", 100));
+    	partsList.add(new Part("suspensão", 500));
     }
 
     public double weightCalculator() {
