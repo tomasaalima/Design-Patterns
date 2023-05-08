@@ -1,4 +1,4 @@
-package main;
+package command;
 
 public class GarageDoorOpenCommand implements Command{
     GarageDoor garageDoor;
@@ -7,15 +7,27 @@ public class GarageDoorOpenCommand implements Command{
         this.garageDoor = garageDoor;
     }
     
-    public void enable(){
+    public String getType() {
+		return this.getClass().getSimpleName();
+	}
+    
+    public Parameter getParameter() {
+    	return garageDoor;
+    }
+
+	public void enable(){
         garageDoor.up();
         garageDoor.stop();
     }
-    
-	@Override
+
 	public void disable() {
 		// TODO Auto-generated method stub
 		garageDoor.down();
+	}
+
+	@Override
+	public String toString() {
+		return "GarageDoorOpenCommand [garageDoor=" + garageDoor + "]";
 	}
 }
    

@@ -1,0 +1,6 @@
+{"type":"GarageDoorOpenCommand", "parameter":{"state":"Porta da garagem baixada"}}
+{"type":"LightOnCommand", "parameter":{"state":"Luz apagada"}}
+{"type":"CeilingFanOnCommand", "parameter":{"state":"Ventilador desligado","speed":0}}
+{"type":"TvOnCommand", "parameter":{"state":"Televisão desligada","channel":0,"volume":0}}
+{"type":"SoundOnCommand", "parameter":{"state":"Som desligado","volume":0,"frequency":0.0}}
+{"type":"HottubOnCommand", "parameter":{"state":"Jatos ligados","temperature":33.3}}
