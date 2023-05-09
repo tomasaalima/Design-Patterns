@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author tomas
+ *
+ */
+module Mediator {
+}
